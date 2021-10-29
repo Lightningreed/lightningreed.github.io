@@ -23,6 +23,7 @@
         .presenter {
             text-align: center;
             font-size: 80px;
+            position:relative;
         }
 
         .comet {
@@ -45,29 +46,15 @@
 
         .anipre {
             display: inline;
+            animation: moving 5s infinite;
+            position: relative;
         }
-
-        /*       @keyframes neon {
-            from {
-                text-shadow:
-                    0 0 6px rgba(149, 201, 194, 0.92),
-                    0 0 6px rgba(202, 228, 225, 0.34),
-                    0 0 2px rgba(18, 82, 151, 0.918);
-            }
-
-            to {
-                text-shadow:
-                    0 0 6px rgba(149, 204, 198, 0.98),
-                    0 0 6px rgba(202, 228, 225, 0.42),
-                    0 0 6px rgba(18, 82, 151, 0.918);
-            }
-        } */
+        @keyframes moving {
+        from {top: 0px;}
+        to {top: 100px;}
+        }
     </style>
-    <script>
-        var floatArr = document.getElementsByClassName('anipre');
-        floatArr.forEach(element => {
-        });
-    </script>
+
 </head>
 
 <body>
@@ -87,5 +74,9 @@
         might have, on Discord over at ################. Winners will receive an exclusive in-game badge and everything
         our prizepool has to offer - which is open for donations to (uhhhh blanked out here). Please refer to this</div>
 </body>
-
+<script>
+    let floatArr = document.getElementsByClassName("anipre");
+    var i;
+    for (i = 0; i < floatArr.length; i++) {floatArr[i].style.animationDelay = Math.random()+"s";} 
+</script>
 </html>
