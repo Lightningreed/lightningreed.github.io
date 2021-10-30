@@ -11,13 +11,15 @@
         }
 
         li {
-            float: left;
+            float: right;
+            font-size: 4em;
+            border-width: 20px;
+            border: rgba(0, 0, 0, 0);
         }
 
         li a {
             display: block;
             padding: 8px;
-            background-color: #dddddd;
         }
 
         .presenter {
@@ -28,10 +30,10 @@
 
         .comet {
             font-family: FashionFetish;
-            animation: neon 1s ease-in-out infinite alternate;
             color: #4db9ff;
             letter-spacing: 3px;
-            text-shadow: 0 0 4.8px rgba(56, 199, 235, 0.9);
+            animation: breathing 3s infinite;
+           /* text-shadow: 0 0 4.8px rgba(56, 199, 235, 0.9); */
         }
 
         @font-face {
@@ -46,12 +48,21 @@
 
         .anipre {
             display: inline;
-            animation: moving 5s infinite;
+            animation: moving 0.9s ease-in-out infinite;
             position: relative;
+            color:#dddddd
         }
         @keyframes moving {
-        from {top: 0px;}
-        to {top: 100px;}
+        0% {top: 0px;}
+        25% {top: 0.25px;}
+        50% {top: 0.5px;}
+        100% {top: 0.75px;}
+        /* {top: 1px;} */
+        }
+        @keyframes breathing {
+            0% {text-shadow: 0 0 5px rgb(0, 204, 255);}
+            50% {text-shadow: 0 0 10px rgb(0, 204, 255);}
+            100% {text-shadow: 0 0 5px rgb(0, 204, 255);}
         }
     </style>
 
@@ -59,10 +70,10 @@
 
 <body>
     <ul class="nav">
+        <li><a>Donation</a></li>
         <li><a>Register</a></li>
         <li><a>FAQ</a></li>
         <li><a>About us</a></li>
-        <li><a>Donation</a></li>
     </ul>
     <div class="presenter">
         <div class="anipre">v</div><div class="anipre">t</div><div class="anipre">t</div><div class="anipre"> </div><div class="anipre">p</div><div class="anipre">r</div><div class="anipre">e</div><div class="anipre">s</div><div class="anipre">e</div><div class="anipre">n</div><div class="anipre">t</div><div class="anipre">s</div><br>
