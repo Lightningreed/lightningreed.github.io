@@ -88,6 +88,9 @@
 <script>
     let floatArr = document.getElementsByClassName("anipre");
     var i;
-    for (i = 0; i < floatArr.length; i++) {floatArr[i].style.animationDelay = Math.random()+"s";} 
+    var v = 0;
+    for (i = 0; i < floatArr.length; i++) {
+        v = v+0.12;
+        floatArr[i].style.animationDelay = /*Math.random()+"s"*/ v +'s';} 
 </script>
 </html>
