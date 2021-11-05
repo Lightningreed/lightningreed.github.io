@@ -26,25 +26,53 @@
             right: 0;
             bottom: 0;
             overflow: hidden;
-            display: flex;
+            display: inline-block;
+            width: 1920px;
+            height:1080px;
+        }
+
+ /*       .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .stars:before, .stars:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("stars.png");
+            background-size: 100%;
+            animation: slidex 2s infinite linear;
+        }
+
+        .stars:before {
+            right:100%;
+        } */
+/*
+        .stars:before, .stars:after {
+            background-size: 100%;
+            content: "";
         }
 
         .stars {
-            height: 150%;
-            width: 150%;
+            height: 100%;
+            width: auto;
             animation: slidex 2s linear infinite;
         }
 
         @keyframes slidex {
             from {
-                transform: translate(0) scale(1);
+                transform: translateX(0);
             }
 
             to {
-                transform: translate(-100%) scale(1);
+                transform: translateX(100%);
             }
         }  
-
+*/
         ul {
             list-style-type: none;
             margin: 0;
@@ -124,15 +152,56 @@
                 text-shadow: 0 0 5px rgb(0, 204, 255);
             }
         }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin:0px;
+        }
+
+        .bg:before,
+        .bg:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("stars.png");
+            background-size: 100%;
+            animation: move 10s infinite linear;
+            margin:0px;
+        }
+
+        .bg:before {
+            right: 100%;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0%);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="background-layer">
-        <img class="stars" src="wide.png">
-        <img class="stars stars2" src="wide.png">
-    </div>
+<div class="container"
+    <div class="background-layer"><div class="bg"></div></div>
+    <div class="background-layer"><div class="bg"></div></div>
+</div>
+
     <ul class="nav">
         <li><a>Donation</a></li>
         <li><a>Register</a></li>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {margin:0px;
+        display:contents;}
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin:0px;
+        }
+
+        .bg:before,
+        .bg:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("test.png");
+            background-size: 100%;
+            animation: move 10s infinite linear;
+            margin:0px;
+        }
+
+        .bg:before {
+            right: 100%;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0%);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"><div class="bg"></div></div><div class="container"><div class="bg"></div></div>
+</body>
+
+</html>
