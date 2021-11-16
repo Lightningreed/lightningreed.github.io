@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="background-layer"><div class="bg"></div></div>
+    <div class="background-layer"><div class="bg"></div></div>
+</div>
+<div class="container2">
+    <div class="background-layer"><div class="bg"></div></div>
+    <div class="background-layer"><div class="bg"></div></div>
+</div>
+    <ul class="nav">
+        <li><a>Donation</a></li>
+        <li><a>Register</a></li>
+        <li><a>FAQ</a></li>
+        <li><a>About us</a></li>
+    </ul>
+    <div class="presenter">
+        <div class="head-presenter"><div class="anipre">v</div><div class="anipre">t</div><div class="anipre">t</div><div class="anipre"> </div><div class="anipre">p</div><div class="anipre">r</div><div class="anipre">e</div><div class="anipre">s</div><div class="anipre">e</div><div class="anipre">n</div><div class="anipre">t</div><div class="anipre">s</div><br></div>
+        <a class="comet">Comet</a><a class="bolder open" >Open</a>
+    </div>
+    <iframe width="400" height="300" src="https://www.youtube.com/embed/78mpX6mYu1c" title="Trailer"></iframe>    
+    <h1 class="boxheader bolder">Join the battle!</h1>
+    <div class="textbox"><i>???? Open is a TETR.IO tournament aimed at the Eastern block-stacking playerbase where many talented players
+        reside. We'll do our best to provide support during the duration of the tournament or answer any question you
+        might have, on Discord over at ################. Winners will receive an exclusive in-game badge and everything
+        our prizepool has to offer - which is open for donations to (uhhhh blanked out here). Please refer to this
+    </i></div>
+
+</body>
+<script>
+    let floatArr = document.getElementsByClassName("anipre");
+    var i;
+    var v = 0;
+    for (i = 0; i < floatArr.length; i++) {
+        v = v + 0.12;
+        floatArr[i].style.animationDelay = /*Math.random()+"s"*/ v + 's';
+    }
+</script>
+
+</html>
