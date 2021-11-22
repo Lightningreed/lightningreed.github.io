@@ -81,13 +81,17 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+
         }
 
         li {
             float: right;
-            font-size: 4em;
+            font-size: 1.9em;
             border-width: 20px;
             border: rgba(0, 0, 0, 0);
+            color: #dddddd;
+            font-family: FashionFetishBold;
+            margin-left: 10px;
         }
 
         li a {
@@ -95,10 +99,25 @@
             padding: 8px;
         }
 
+        iframe {margin-top: 100vh; /* move everything down */}
+
         .presenter {
             text-align: center;
             font-size: 80px;
-            position: relative;
+            position: absolute;
+            line-height: 125%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 85%;
+            left: 45%;
+            width: 10%;
+            height: auto;
+            animation: arrowBlink 2s infinite alternate;
         }
 
 
@@ -142,13 +161,15 @@
             display: inline;
             animation: moving 0.9s ease-in-out infinite alternate;
             position: relative;
-            color: #dddddd
+            color: #dddddd;
+            font-size: 0.82em;
+            margin-left: 13px;
         }
 
         .open {
             color:#eceff4;
             text-shadow: 0px 0px 8px #eceff4;
-            animation: breathing2 3s infinite;
+            animation: breathing2 2s infinite;
             font-size: 0.82em;
             margin-left: 13px;
         }
@@ -159,7 +180,7 @@
             }
 
             100% {
-                top: 5px;
+                top: 10px;
             }
 
             /* {top: 1px;} */
@@ -192,6 +213,11 @@
                 text-shadow: 0 0 5px #eceff4;
             }
         }
+
+        @keyframes arrowBlink {
+            from {opacity: 20%;}
+            to {opacity: 60%;}
+        }
         .container, .container2 {
             width: 100vw;
             height: 100vh;
@@ -220,7 +246,7 @@
             height: 100vh;
             background-image: url("stars.png");
             background-size: 150%;
-            animation: move 95s infinite linear;
+            animation: move 180s infinite linear;
             margin:0px;
         }
 
@@ -250,9 +276,17 @@
             text-align: left;
             width: 850px;
             font-size: 28px;
+            line-height: 150%;
+            word-spacing: 3px;
+            font-style: italic;
+
         }
 
         .boxheader {
             font-size: 60px;
             margin-bottom: 80px;
         }
+
+        ::-webkit-scrollbar {
+            display:none;
+          }
