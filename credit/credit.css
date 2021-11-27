@@ -1,0 +1,113 @@
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: inline-block;
+    width: 100vw;
+    height:100vh;
+}
+
+.container, .container2 {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+}
+
+.container2 {
+    margin-top: 100vh;
+}
+
+.bg {
+    position: absolute;
+    overflow: hidden;
+    margin:0px;
+    width: 100vw;
+    height:200vh;
+}
+
+.bg:before,
+.bg:after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../stars.png");
+    background-size: 150%;
+    animation: move 180s infinite linear;
+    margin:0px;
+}
+
+.bg:before {
+    right: 100%;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+html {
+    width: auto;
+    overflow-x: hidden;
+    background-color: rgb(14, 23, 36);
+    background-image: linear-gradient(153deg,
+            rgba(14, 23, 36, 1) 14%,
+            rgba(40, 64, 98, 1) 86%);
+}
+
+img {
+    position:relative;
+    max-width: 80px;
+    height:auto;
+    margin-top: 12px;
+    top: 23px;
+}
+
+@font-face {
+    font-family: FashionFetishOutline;
+    src: url('https://files.catbox.moe/66j0zk.ttf');
+}
+
+@font-face {
+    font-family: FashionFetishReg;
+    src: url('https://files.catbox.moe/cpv2sr.ttf');
+} 
+
+@font-face {
+    font-family: FashionFetishBold;
+    src: url('https://files.catbox.moe/b01wz0.ttf');
+}
+
+div {
+    font-family: FashionFetishBold;
+    color:white;
+}
+
+.desc {font-size: 1.2em;margin-top: 40px;margin-bottom: 9px;line-height: 1.6em;}
+
+.abg {background-color: rgba(3, 10, 19, 0.808);}
+
+.information {margin-left: 2%;}
+
+.comet {
+    font-family: FashionFetishOutline;
+    color: #4db9ff;
+    letter-spacing: 3px;
+    animation: breathing 3s infinite;
+    font-size: 1.5em;
+    /* text-shadow: 0 0 4.8px rgba(56, 199, 235, 0.9); */
+}
+
+.name {display:inline;margin-left: 0.6em;font-size: 1.7em;}
+
+.nameKam {font-size: 1.6em;}

@@ -106,7 +106,7 @@
             font-size: 80px;
             position: absolute;
             line-height: 125%;
-            top: 50%;
+            top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
