@@ -231,7 +231,7 @@
         }
 
         .bg {
-            position: absolute;
+            position: fixed;
             overflow: hidden;
             margin:0px;
             width: 100vw;
