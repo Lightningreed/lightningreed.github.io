@@ -8,38 +8,110 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="background-layer"><div class="bg"></div></div>
-    <div class="background-layer"><div class="bg"></div></div>
-</div>
-<div class="nav unselectable">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#" class="right">Link</a>
-  </div>
+    <div class="container">
+        <div class="background-layer">
+            <div class="bg"></div>
+        </div>
+        <div class="background-layer">
+            <div class="bg"></div>
+        </div>
+    </div>
+    <div class="logo"></div>
+    <div class="nav unselectable">
+        <a href="#">Donation</a>
+        <a href="#">Register</a>
+        <a href="#">FAQ</a>
+        <a href="#" class="right">About us</a>
+    </div>
     <div class="presenter unselectable">
         <div class="head-presenter"><div class="anipre">v</div><div class="anipre">t</div><div class="anipre">t</div><div class="anipre"> </div><div class="anipre">p</div><div class="anipre">r</div><div class="anipre">e</div><div class="anipre">s</div><div class="anipre">e</div><div class="anipre">n</div><div class="anipre">t</div><div class="anipre">s</div><br></div>
-        <div class="comet">コメット</div><div class="bolder open" >Ipsum</div>
+        <div class="comet">コメット</div>
+        <div class="bolder open">Ipsum</div>
     </div>
-    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430.22 402.75"><defs><style>.cls-1{fill:none;stroke:#eceff4;stroke-linecap:round;stroke-miterlimit:10;stroke-width:30px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="cls-1" points="15.22 138.94 715 386.83 1415.22 138.94"/><polyline class="cls-1" points="15 15 714.78 262.89 1415 15"/></g></g></svg>
-    <iframe width="400" height="300" src="https://www.youtube.com/embed/78mpX6mYu1c" title="Trailer"></iframe>    
-    <h1 class="boxheader bolder">Join the battle!</h1>
-    <div class="textbox">???? Open is a TETR.IO tournament aimed at the Eastern block-stacking playerbase where many talented players
-        reside. We'll do our best to provide support during the duration of the tournament or answer any question you
-        might have, on Discord over at ################. Winners will receive an exclusive in-game badge and everything
-        our prizepool has to offer - which is open for donations to (uhhhh blanked out here). Please refer to this
+    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430.22 402.75">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke: #eceff4;
+                    stroke-linecap: round;
+                    stroke-miterlimit: 10;
+                    stroke-width: 30px;
+                }
+            </style>
+        </defs>
+        <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+                <polyline class="cls-1" points="15.22 138.94 715 386.83 1415.22 138.94" />
+                <polyline class="cls-1" points="15 15 714.78 262.89 1415 15" />
+            </g>
+        </g>
+    </svg>
+    <div class="scrollEff"> <iframe width="400" height="300" src="https://www.youtube.com/embed/78mpX6mYu1c"
+            title="Trailer"></iframe>
+        <h1 class="boxheader bolder">Join the battle!</h1>
+        <div class="textbox">???? Open is a TETR.IO tournament aimed at the Eastern block-stacking playerbase where many
+            talented players
+            reside. We'll do our best to provide support during the duration of the tournament or answer any question
+            you
+            might have, on Discord over at ################. Winners will receive an exclusive in-game badge and
+            everything
+            our prizepool has to offer - which is open for donations to (uhhhh blanked out here). Please refer to this
+        </div>
     </div>
-
 </body>
 <script>
     let floatArr = document.getElementsByClassName("anipre");
     var i;
     var v = 0;
-    for (i = 0; i < floatArr.length; i++) {
-        v = v + 0.12;
-        floatArr[i].style.animationDelay = /*Math.random()+"s"*/ v + 's';
-    }
+    for (i = 0; i < floatArr.length; i++) { v=v + 0.12; floatArr[i].style.animationDelay= /*Math.random()+"s"*/ v + 's'
+        ; } 
+ 
+//initialize throttleTimer as false
+let throttleTimer = false;
+ 
+const throttle = (callback, time) => {
+    //don't run the function while throttle timer is true
+    if (throttleTimer) return;
+     
+    //first set throttle timer to true so the function doesn't run
+    throttleTimer = true;
+     
+    setTimeout(() => {
+        //call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed 
+        callback();
+        throttleTimer = false;
+    }, time);
+}
+
+        const scrollOffset = 600;
+
+        const scrollElement = document.querySelector(".scrollEff");
+
+        const elementInView = (el, offset = 0) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+        elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset) ); }; const
+            displayScrollElement=()=> {
+            scrollElement.classList.add('scrolled');
+            }
+
+            const hideScrollElement = () => {
+            scrollElement.classList.remove('scrolled');
+            }
+
+            const handleScrollAnimation = () => {
+            if (elementInView(scrollElement, scrollOffset)) {
+            displayScrollElement();
+            } else {
+            hideScrollElement();
+            }
+            }
+
+            window.addEventListener('scroll', () => {
+            throttle(handleScrollAnimation, 250);
+            })
 </script>
 
 </html>
