@@ -89,6 +89,20 @@ img {
     src: url('https://files.catbox.moe/b01wz0.ttf');
 }
 
+.nav {
+    overflow: hidden;
+}
+
+
+.nav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
 div {
     font-family: FashionFetishBold;
     color: white;
