@@ -167,7 +167,7 @@ div {
 
 .abt {margin-right: 2%;}
 
-.abtHeader {width: fit-content;margin-left: 20px;margin-top: 1em;}
+.abtHeader {width: fit-content;margin-left: 20px;margin-top: 1em;min-width: 400px;}
 
 .unselectable {
     -webkit-touch-callout: none;
