@@ -123,10 +123,10 @@ div {
 
 @media screen and (max-width: 768px){
     #hamitems a {
-      box-sizing: border-box;
-      display: block;
+      /* box-sizing: border-box; */
+      /* display: block; */
       width: 100%;
-      /* display: inline; */
+      display: inline;
     }
    
     #hamnav label {
@@ -139,7 +139,7 @@ div {
     }
   
     #hamitems { display: none; }
-    #hamnav input:checked ~ #hamitems { display: block; }
+    #hamnav input:checked ~ #hamitems {display: block;font-size: 0.75em;padding-bottom: 1em;position: absolute;margin-left: 9%;top: 18px;}
   }
 
   .nav {
