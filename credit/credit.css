@@ -196,6 +196,7 @@ div {
     margin-right: auto;
     width: fit-content;
     margin-bottom: 0.6em;
+    /* margin-top: 1.5em; */
 }
 
 .name {
@@ -269,10 +270,14 @@ div {
     }
 }
 
+
+
+.something {width:1px;height: 2em;}
 @media screen and (max-width: 768px) {
     .comet {font-size: 0.9em;}
     .open {font-size:0.5em;}
     .luv {font-size: 1.4em;}
     .specialThanks {font-size: 1.4em;}
     [class*=name] {font-size: 1.2em;}
+    .something {height:0.2em;}
 }
