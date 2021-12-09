@@ -89,17 +89,62 @@ img {
     src: url('https://files.catbox.moe/b01wz0.ttf');
 }
 
-.nav {
-    overflow: hidden;
+#hamnav {
+    width: 100%;
+    z-index: 10;
+  }
+  
+  #hamitems {/* display: flex; */}
+  #hamitems a {
+    flex-grow: 1;
+    /* flex-basis: 0; */
+    padding: 10px;
+    color: white;
+    margin-left: 5px;
+    text-align: center;
+    /* width: 10vw; */
+    /* height: auto; */
+    /* min-width: 10vw; */
+    /* margin-left: 10px; */
+  }
+
+  
+  #hamnav label, #hamburger {display: none;}
+
+@media screen and (max-width: 768px){
+    #hamitems a {
+      /* box-sizing: border-box; */
+      /* display: block; */
+      width: 100%;
+      padding: 6px;
+      display: inline;
+    }
+   
+    #hamnav label {
+      display: inline-block;
+      color: white;
+      /* background: #a02620; */
+      font-style: normal;
+      font-size: 1.5em;
+      padding: 10px;
+    }
+  
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems {display: block;font-size: 0.75em;padding-bottom: 1em;position: absolute;margin-left: 9%;top: 20px;}
+  }
+
+  .nav {
+    /* overflow: hidden; */
+    font-family: FashionFetishBold;
+    float: right;
 }
 
 
 .nav a {
-    float: right;
-    display: block;
+    display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    /* padding: 14px 20px; */
     text-decoration: none;
 }
 
@@ -156,6 +201,7 @@ div {
     display: inline;
     margin-left: 0.6em;
     font-size: 1.7em;
+    line-height: 2.2;
 }
 
 .nameKam {

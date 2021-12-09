@@ -99,23 +99,6 @@ body {
         } */
 
 
-.nav {
-    /* overflow: hidden; */
-    font-family: FashionFetishBold;
-    float: right;
-}
-
-
-.nav a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    /* padding: 14px 20px; */
-    text-decoration: none;
-}
-
-
-
 iframe {
     margin-top: 100vh;
     /* move everything down */
@@ -391,9 +374,11 @@ iframe {
 
 @media screen and (max-width: 768px){
     #hamitems a {
-      box-sizing: border-box;
-      display: block;
+      /* box-sizing: border-box; */
+      /* display: block; */
       width: 100%;
+      padding: 6px;
+      display: inline;
     }
    
     #hamnav label {
@@ -406,7 +391,22 @@ iframe {
     }
   
     #hamitems { display: none; }
-    #hamnav input:checked ~ #hamitems { display: block; }
+    #hamnav input:checked ~ #hamitems {display: block;font-size: 0.75em;padding-bottom: 1em;position: absolute;margin-left: 9%;top: 20px;}
   }
+
+  .nav {
+    /* overflow: hidden; */
+    font-family: FashionFetishBold;
+    float: right;
+}
+
+
+.nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    /* padding: 14px 20px; */
+    text-decoration: none;
+}
 
 

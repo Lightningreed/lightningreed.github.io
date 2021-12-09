@@ -82,25 +82,6 @@ html {
     src: url('https://files.catbox.moe/b01wz0.ttf');
 }
 
-div {
-    font-family: FashionFetishBold;
-    color: white;
-}
-
-.content {
-    line-height: 2em; 
-}
-
-.register {width: fit-content;margin-left: auto;margin-right: auto;font-size: 2.5em;padding: 0.8em;background-color: rgb(4 8 14 / 53%);}
-
-.head {
-    font-size: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    padding-top: 1em;
-}
-
 #hamnav {
     width: 100%;
     z-index: 10;
@@ -160,5 +141,17 @@ div {
     text-decoration: none;
 }
 
-.subContent {padding-top: 1em;
-padding-left:0.6em;}
+.content {font-family: FashionFetishBold;/* padding-top: 3em; */background-color: rgb(255 255 255 / 46%);/* margin-top: 2em; */padding-left: 0.5em;line-height: 3em;}
+
+[class*=q] {
+    font-size:1.5em;
+}
+
+.something {width:1px; height: 1.5em; }
+
+.q1 {margin-top:1em;}
+
+@media screen and (max-width: 768px) {
+    .q1 {margin-top:0em;}
+    .content{line-height: 2em;}
+}
