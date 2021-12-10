@@ -162,3 +162,15 @@ div {
 
 .subContent {padding-top: 1em;
 padding-left:0.6em;}
+
+.logo {width: 10%;height:auto;position: absolute;top: 1vh;left: 1vh;}
+
+@media screen and (max-width: 768px) {
+    .logo {width:15%;height:auto;top: 8%;}
+}
+
+@media screen and (max-width: 425px) {
+    .logo {width: 25%;height:auto;top: 7%;}
+    .presenter {margin-top:1em;}
+    .head {padding-top:1em;}
+}
