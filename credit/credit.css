@@ -290,5 +290,5 @@ div {
 
 @media screen and (max-width: 425px) {
     .logo {width: 25%;height:auto;top: 7%;}
-    .presenter {margin-top:1em;}
+    .presenter {margin-top:1.5em;}
 }

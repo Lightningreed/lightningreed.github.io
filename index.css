@@ -124,7 +124,9 @@ iframe {
     animation: arrowBlink 2s infinite alternate;
 }
 
+#countdown, #quote {font-family: FashionFetishBold;/* text-align: center; */top:65%;color:#dddddd;position:absolute;/* margin-left: auto; */margin-right: auto;transform: translate(-50%, -50%);left: 50%;}
 
+#quote {top: 70%;}
 .comet {
     font-family: FashionFetishOutline;
     color: #4db9ff;
@@ -316,13 +318,13 @@ iframe {
     user-select: none;
 }
 
-.scrollEff {
-    opacity: 0;
-    transition: opacity 3s;
-  }
-   
-  .scrollEff.scrolled {
-    opacity: 1;
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
 .bot-presenter {
@@ -419,4 +421,5 @@ iframe {
 @media screen and (max-width: 425px) {
 .trailer {width: 300px;height: 200px;}
 }
+
 

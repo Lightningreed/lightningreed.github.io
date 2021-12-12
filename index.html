@@ -20,7 +20,7 @@
         <label for="hamburger">&#9776;</label>
         <input type="checkbox" id="hamburger"/>
         <div class="nav" id="hamitems">
-            <a href="../donation/donation.html">Donation</a>
+            <a href="https://streamelements.com/eggfriedrenge/tip ">Donation</a>
             <a href="registration/registration.html">Register</a>
             <a href="faq/FAQ.html">FAQ</a>
             <a href="credit/credit.html">About Us</a>
@@ -34,6 +34,7 @@
             <a class="bolder open">Open</a>
             </div>
     </div>
+    <div id="countdown"></div><br><div id="quote"></div>
     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430.22 402.75">
         <defs>
             <style>
@@ -70,51 +71,39 @@
     for (i = 0; i < floatArr.length; i++) { v=v + 0.12; floatArr[i].style.animationDelay= /*Math.random()+"s"*/ v + 's'
         ; } 
  
-//initialize throttleTimer as false
-let throttleTimer = false;
- 
-const throttle = (callback, time) => {
-    //don't run the function while throttle timer is true
-    if (throttleTimer) return;
-     
-    //first set throttle timer to true so the function doesn't run
-    throttleTimer = true;
-     
-    setTimeout(() => {
-        //call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed 
-        callback();
-        throttleTimer = false;
-    }, time);
-}
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
-        const scrollOffset = 600;
+var x = setInterval(function() {
 
-        const scrollElement = document.querySelector(".scrollEff");
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("countdown").innerHTML = "The comet is falling in: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "THE COMET IS FALLING!!!";
+  }
+}, 1000);
 
-        const elementInView = (el, offset = 0) => {
-        const elementTop = el.getBoundingClientRect().top;
-
-        return (
-        elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset) ); }; const
-            displayScrollElement=()=> {
-            scrollElement.classList.add('scrolled');
-            }
-
-            const hideScrollElement = () => {
-            scrollElement.classList.remove('scrolled');
-            }
-
-            const handleScrollAnimation = () => {
-            if (elementInView(scrollElement, scrollOffset)) {
-            displayScrollElement();
-            } else {
-            hideScrollElement();
-            }
-            }
-
-            window.addEventListener('scroll', () => {
-            throttle(handleScrollAnimation, 250);
-            })
+var quote = ['The night is going to be beautiful!', 
+'A starry night.. as beautiful as you!', 
+'Prepare to make a wish!',
+'Floating amongst the stars...',
+'What\'s your New Year resolution?',
+'BOOM! Tetris for Jeff!',
+'speeeeeeeeeeeen',
+'Try your best!']; 
+const random = Math.floor(Math.random() * quote.length);
+if (random == 6) {document.getElementById("quote").style.animation = "spin 0.5s cubic-bezier(0.25, 0.24, 0.75, 0.72) infinite";}
+document.getElementById("quote").innerHTML = quote[random];
 </script>
 
 </html>

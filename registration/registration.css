@@ -172,5 +172,5 @@ padding-left:0.6em;}
 @media screen and (max-width: 425px) {
     .logo {width: 25%;height:auto;top: 7%;}
     .presenter {margin-top:1em;}
-    .head {padding-top:1em;}
+    .head {margin-top: 1em;}
 }
